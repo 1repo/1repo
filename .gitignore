@@ -1,0 +1,26 @@
+/onerepo-api/target/
+/onerepo-api/!.mvn/wrapper/maven-wrapper.jar
+
+### STS ###
+/onerepo-api/.apt_generated
+/onerepo-api/.classpath
+/onerepo-api/.factorypath
+/onerepo-api/.project
+/onerepo-api/.settings
+/onerepo-api/.springBeans
+
+### IntelliJ IDEA ###
+/onerepo-api/.idea
+/onerepo-api/*.iws
+/onerepo-api/*.iml
+/onerepo-api/*.ipr
+
+### NetBeans ###
+/onerepo-api/nbproject/private/
+/onerepo-api/build/
+/onerepo-api/nbbuild/
+/onerepo-api/dist/
+/onerepo-api/nbdist/
+/onerepo-api/.nb-gradle/
+
+/onerepo-web/node_modules/**

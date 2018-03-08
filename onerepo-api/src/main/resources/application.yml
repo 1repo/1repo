@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    url: jdbc:postgresql:1repo
+    username: 1repo
+    password: 1repo
+  jpa:
+    properties:
+      hibernate:
+        temp:
+          use_jdbc_metadata_defaults: false
+    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
