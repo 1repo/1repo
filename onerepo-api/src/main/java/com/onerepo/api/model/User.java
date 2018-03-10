@@ -15,21 +15,21 @@ import javax.persistence.Table;
 @Entity
 @Table(name="users")
 @Data
-@SequenceGenerator(name = "UserSequence", sequenceName = "users_seq")
+@SequenceGenerator(name = "UserSequence", sequenceName = "users_seq", allocationSize = 1)
 public class User {
   @Id
   @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "UserSequence")
   private Long id;
-  @Column(nullable = false)
+  @Column(nullable = false, unique = true)
   private String username;
   @Column(nullable = false)
   private String name;
-  @Column(nullable = false)
+  @Column(nullable = false, unique = true)
   private String email;
   @Column(nullable = false)
-  private String passwordHashed;
+  private String passwordHash;
   private String token;
   @Column(nullable = false)
   @Enumerated(EnumType.STRING)
-  private UserStatus status;
+  private UserStatus status = UserStatus.REGISTERED;
 }
