@@ -4,7 +4,7 @@ import com.onerepo.api.bean.RegisterBean;
 import com.onerepo.api.bean.UserBean;
 import com.onerepo.api.bean.UserMapper;
 import com.onerepo.api.model.User;
-import com.onerepo.api.repository.UserRepository;
+import com.onerepo.api.dao.UserDAO;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -12,13 +12,13 @@ import org.springframework.stereotype.Service;
 @AllArgsConstructor
 public class RegistrationService {
 
-  private UserRepository userRepository;
+  private UserDAO userDAO;
 
   private UserMapper userMapper;
 
   public UserBean register(RegisterBean registerBean) {
     User user = userMapper.fromRegisterBean(registerBean);
-    userRepository.save(user);
+    userDAO.save(user);
     UserBean userBean = userMapper.toUserBean(user);
     return userBean;
   }
