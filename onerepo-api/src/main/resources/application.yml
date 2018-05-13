@@ -1,3 +1,7 @@
+1repo:
+  git:
+    dir: repos/git
+
 spring:
   datasource:
     url: jdbc:postgresql:1repo
